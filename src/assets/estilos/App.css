@@ -1,0 +1,69 @@
+.contenedor-fondo {
+  overflow-y: auto; /* Habilita el scroll si el contenido es más alto que la pantalla */
+  position: relative; /* Permite que los elementos hijos se posicionen correctamente */
+  height: auto; /* Altura completa del viewport */
+  background-image: url("../estaticos/lined-paper.jpg");
+  filter: sepia(6%);
+  background-size: cover; /* La imagen cubrirá todo el contenedor */
+  background-position: center; /* Centrar la imagen en el contenedor */
+  background-repeat: no-repeat; /* Evitar que la imagen se repita */
+  z-index: -1; /* Mover el fondo detrás del contenido */
+  background-attachment: scroll; /* Permite que la imagen de fondo se mueva con el contenido */
+  padding: var(--espacios-2);
+}
+
+.contenido-superior {
+  position: relative; /* Mantener el contenido por encima del fondo */
+  z-index: 0; /* Asegura que el contenido quede encima del fondo */
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-width: 1200px;
+  max-width: 1599px;
+}
+
+/* Sistema de Grillas */
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: justify;
+  padding: var(--espacios-2);
+  z-index: 1;
+}
+
+/* 
+      background-image: url('../estaticos/lined-paper.jpg');
+    filter: sepia(10%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+      background-image: url("../estaticos/lined-paper.jpg");
+  filter: sepia(6%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  */
+
+/* Media Queries  */
+
+@media (min-width: 1200px) {
+  .contenedor-fondo {
+    padding: var(--espacios-1);
+  }
+
+  .contenido-superior {
+    position: relative; /* Mantener el contenido por encima del fondo */
+    z-index: 0; /* Asegura que el contenido quede encima del fondo */
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-width: 1200px;
+    max-width: 1599px;
+  }
+
+  .section {
+    padding: var(--espacios-1);
+  }
+}
