@@ -1,8 +1,8 @@
-# React + Vite
+Este es el repositorio de mi portfolio web, diseñado y desarrollado para mostrar mis habilidades como desarrollador y diseñador web. El sitio incluye secciones como "Conóceme", "Experiencia", "Proyectos" y "Contacto", con un enfoque en la usabilidad, el diseño moderno y minimalista, y la navegación intuitiva.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tecnologías utilizadas:
+React para una interfaz dinámica y escalable.
+Vite como herramienta de construcción rápida.
+CSS Grid y Flexbox para un diseño responsive.
+Firebase (integración futura) para la gestión de proyectos y contacto.
+Este proyecto está en constante evolución, ¡gracias por visitarlo! 🚀
