@@ -1,69 +1,59 @@
-.contenedor-fondo {
-  overflow-y: auto; /* Habilita el scroll si el contenido es más alto que la pantalla */
-  position: relative; /* Permite que los elementos hijos se posicionen correctamente */
-  height: auto; /* Altura completa del viewport */
-  background-image: url("../estaticos/lined-paper.jpg");
-  filter: sepia(6%);
-  background-size: cover; /* La imagen cubrirá todo el contenedor */
-  background-position: center; /* Centrar la imagen en el contenedor */
-  background-repeat: no-repeat; /* Evitar que la imagen se repita */
-  z-index: -1; /* Mover el fondo detrás del contenido */
-  background-attachment: scroll; /* Permite que la imagen de fondo se mueva con el contenido */
-  padding: var(--espacios-2);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.contenido-superior {
-  position: relative; /* Mantener el contenido por encima del fondo */
-  z-index: 0; /* Asegura que el contenido quede encima del fondo */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #ecf0f1;
+  --accent-color: #f45b0f;
+  --font-family: "Raleway";
+  --font-size-base: 16px;
+  --espacios-1: 2.5rem 4rem;
+  --espacios-2: 1rem 2rem;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
+.app {
   display: flex;
-  flex-direction: column;
-  height: auto;
-  min-width: 1200px;
-  max-width: 1599px;
 }
 
-/* Sistema de Grillas */
+.content {
+  width: 88%; 
+  margin-left: 12%; 
+  height: 100vh; 
+}
+
 .section {
+  height: 100vh; 
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  text-align: justify;
-  padding: var(--espacios-2);
-  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #D91656; 
+  color: white;
 }
 
-/* 
-      background-image: url('../estaticos/lined-paper.jpg');
-    filter: sepia(10%);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
-      background-image: url("../estaticos/lined-paper.jpg");
-  filter: sepia(6%);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  */
+.section-content {
+  text-align: center; 
+  padding: 20px; 
+}
 
-/* Media Queries  */
-
-@media (min-width: 1200px) {
-  .contenedor-fondo {
-    padding: var(--espacios-1);
-  }
-
-  .contenido-superior {
-    position: relative; /* Mantener el contenido por encima del fondo */
-    z-index: 0; /* Asegura que el contenido quede encima del fondo */
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-width: 1200px;
-    max-width: 1599px;
-  }
-
-  .section {
-    padding: var(--espacios-1);
+@media (max-width: 768px) {
+  .content {
+    width: 100%; 
+    margin-left: 0;
   }
 }
+
+
