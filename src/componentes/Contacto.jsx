@@ -3,7 +3,7 @@ import "../assets/estilos/Contacto.css";
 function Contacto() {
   return (
     <>
-      <section id="contacto" className="section">
+      <section id="contacto" className="section seccion-contactos">
         <div className="section-content">
           <div className="contacto-texto">
             <h4 className="titulo-contacto">Hablemos</h4>

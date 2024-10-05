@@ -1,7 +1,9 @@
+import "../assets/estilos/Proyectos.css";
+
 function Proyectos() {
   return (
     <>
-      <section id="proyectos" className="section">
+      <section id="proyectos" className="section seccion-proyectos">
         <div className="section-content">
           <h4 className="titulo-proyectos">Lo que estoy creando</h4>
           <p className="texto-proyectos">

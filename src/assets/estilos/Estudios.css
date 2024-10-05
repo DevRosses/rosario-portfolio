@@ -1,20 +1,3 @@
-.galleria {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.gallery-item {
-  background-color: transparent;
-  padding: 20px;
-  margin: 10px;
-  width: calc(33% - 20px);
-}
-
-/* Responsive galeria-esudios*/
-@media (max-width: 768px) {
-  .gallery-item {
-    width: calc(100% - 20px);
-  }
+.seccion-estudios {
+    
 }

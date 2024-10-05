@@ -1,7 +1,9 @@
+import "../assets/estilos/Experiencias.css";
+
 function Experiencias() {
   return (
     <>
-      <section id="experiencias" className="section">
+      <section id="experiencias" className="section seccion-experiencias">
         <div className="section-content">
           <h4 className="titulo-experiencias">
             Superación personal y crecimiento profesional

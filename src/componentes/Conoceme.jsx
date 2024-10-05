@@ -1,7 +1,9 @@
+import "../assets/estilos/Conoceme.css";
+
 function Conoceme() {
   return (
     <>
-      <section id="conoceme" className="section">
+      <section id="conoceme" className="section seccion-conoceme">
         <div className="section-content">
           <h4 className="titulo-conoceme">Conóceme más allá del código</h4>
           <p className="texto-conoceme">

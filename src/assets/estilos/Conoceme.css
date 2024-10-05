@@ -1,0 +1,11 @@
+.seccion-conoceme {
+
+}
+
+.titulo-conoceme {
+    color: var(--color-primario);
+}
+
+.texto-conoceme {
+    color: var(--color-secundario);
+}

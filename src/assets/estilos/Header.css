@@ -4,17 +4,28 @@
   left: 0;
   width: 12%;
   height: 100vh;
-  background-color: #640D5F;
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
-.logo h1 {
-  margin-bottom: 30px;
-  font-size: 24px;
+.user {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 25%;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  background-color: var(--color-acento);
+  border-radius: 0 25%;
+  overflow: hidden;
+  padding: 8px;
 }
 
 .nav ul {
@@ -27,12 +38,21 @@
 }
 
 .nav ul li a {
-  color: white;
+  color: var(--color-fondo);
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s ease;
 }
 
+.nav ul li .bienvenida {
+  color: var(--color-acento);
+}
+
+.nav ul li .bienvenida:hover {
+  color: var(--color-fondo);
+}
+
 .nav ul li a:hover {
-  color: #FFEB55;
+  color: var(--color-acento);
+  transition: all 0.3s ease;
 }

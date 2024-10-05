@@ -1,12 +1,14 @@
-.contenedor {
+.seccion-bienvenida {
 
 }
 
 .titulo-bienvenida {
+    color: var(--color-primario);
 }
 
-.contenedor-texto {
+span {
+    color: var(--color-acento);
 }
-
-.texto-bienvenida {
+.subtitulo-bienvenida {
+    color: var(--color-secundario);
 }

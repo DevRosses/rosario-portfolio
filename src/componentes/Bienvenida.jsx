@@ -1,14 +1,16 @@
-import '../assets/estilos/Bienvenida.css'
+import "../assets/estilos/Bienvenida.css";
 
 function Bienvenida() {
   return (
     <>
-      <section id="bienvenida" className="section">
+      <section id="bienvenida" className="section seccion-bienvenida">
         <div className="section-content">
           <h2 className="titulo-bienvenida">
-            Todo gran viaje comienza con una idea. ¡Bienvenido al mío!
+            Todo gran viaje comienza con una idea.
+            <br />
+            <span>¡Bienvenido al Mio!</span>
           </h2>
-          <h4>
+          <h4 className="subtitulo-bienvenida">
             Descubre cómo la creatividad y la tecnología se cruzan en mi
             historia.
           </h4>

@@ -3,7 +3,7 @@ import "../assets/estilos/Estudios.css";
 function Estudios() {
   return (
     <>
-      <section id="estudios" className="section">
+      <section id="estudios" className="section seccion-estudios">
         <div className="section-content">
           <h4 className="titulo-estudios">
             Mi formación, desde lo académico hasta lo práctico

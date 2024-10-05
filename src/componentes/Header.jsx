@@ -1,16 +1,17 @@
 import "../assets/estilos/Header.css"
+import User from "../assets/estaticos/User.jpg"
 
 function Header() {
   return (
     <>
       <header className="header">
         <div className="logo">
-          <h1>Logo</h1>
+<img src={User} alt="User" className="user" />
         </div>
         <nav className="nav">
           <ul>
             <li>
-              <a href="#bienvenida"> DevRosses </a>
+              <a href="#bienvenida" className="bienvenida"> DevRosses </a>
             </li>
             <li>
               <a href="#conoceme"> Conoceme </a>
