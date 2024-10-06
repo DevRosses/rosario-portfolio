@@ -12,15 +12,48 @@
   transition: all 0.3s ease;
 }
 
+
 .section {
-  height: 100vh;
+  min-height: 100vh; 
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-fondo);
+  justify-content: center; 
+  align-items: center; 
+  padding: 60px 20px; 
+  margin: 0;
+  box-sizing: border-box; 
 }
 
+
 .section-content {
-  text-align: center;
+  max-width: 1200px; 
+  width: 100%; 
+  text-align: center; 
   padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+  background-color: var(--color-fondo); 
+  border-radius: 10px; 
 }
+
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 50px 15px; 
+  }
+
+  .section-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 10px; 
+  }
+
+  .section-content {
+    padding: 10px; 
+    max-width: 90%; 
+  }
+}
+
+

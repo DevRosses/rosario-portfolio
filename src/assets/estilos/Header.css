@@ -12,20 +12,29 @@
   justify-content: center;
 }
 
-.user {
+.logo {
+  height: 20%;
+     max-width: 95%; 
+  background-color: var(--color-acento);
+  border-radius: 0 25%;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.logo img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 0 25%;
+  
 }
 
-.logo {
-  height: 100px;
-  width: 100px;
-  background-color: var(--color-acento);
-  border-radius: 0 25%;
-  overflow: hidden;
-  padding: 8px;
+.nav {
+  height: 40%;
+  width: 70%;
+  z-index: 1000;
+     max-width: 90%; 
+     
 }
 
 .nav ul {
@@ -34,25 +43,107 @@
 }
 
 .nav ul li {
-  margin: 15px 0;
+  margin: 16px 0;
 }
 
 .nav ul li a {
   color: var(--color-fondo);
   text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.nav ul li .bienvenida {
-  color: var(--color-acento);
-}
-
-.nav ul li .bienvenida:hover {
-  color: var(--color-fondo);
+  font-size: 1.3rem;
+     max-width: 90%;
 }
 
 .nav ul li a:hover {
   color: var(--color-acento);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
+
+.close-btn {
+display: none;
+}
+
+@media (max-width: 1100px) {
+
+  .header {
+    padding: 50px 15px; 
+    
+  }
+
+  .nav{
+    padding: 15%;
+   max-width: 90%;  
+  }
+}
+
+@media (max-width: 768px) {
+   .header {
+    background-color: transparent;
+    position: fixed;
+    margin: 10px 0;
+       max-width: 90%; 
+    height: auto;
+    z-index: 1000;
+    padding: 40px 10px; 
+  }
+
+  .logo {
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    background-color: var(--color-acento);
+  }
+
+  .logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .nav {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 24%;
+    height: 46%;
+    background-color: var(--color-secundario);
+    padding: 32px 24px;
+    z-index: 1000;
+    border-radius: 25% 0 0 25%;
+  }
+
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .nav ul li a {
+    font-size: 1.1rem;
+  }
+
+
+.content-blurred {
+  filter: blur(5px);
+  transition: filter 0.3s ease-in-out;
+}
+
+ .close-btn {
+  display: block;
+    position: fixed;
+    top: 10px; 
+    right: 10px;
+    font-size: 1.3rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    color: var(--color-fondo);
+  }
+
+  .hide-logo {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+}
+
+

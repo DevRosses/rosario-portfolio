@@ -1,17 +1,38 @@
 import "../assets/estilos/Header.css"
 import User from "../assets/estaticos/User.jpg"
+import React, { useState } from "react";
 
 function Header() {
+
+  const [menuAbierto, setMenuAbierto] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuAbierto(!menuAbierto);
+    console.log('funciona el click')
+    console.log("el menu esta: ", setMenuAbierto );
+  };
+
   return (
     <>
       <header className="header">
-        <div className="logo">
-<img src={User} alt="User" className="user" />
+        <div
+          className={`logo ${menuAbierto ? "hide-logo" : ""}`}
+          onClick={toggleMenu}>
+          <img src={User} alt="User" />
         </div>
-        <nav className="nav">
+
+        <nav className={`nav ${menuAbierto ? "open" : ""}`}>
+          {menuAbierto && (
+            <span className="close-btn" onClick={toggleMenu}>
+              X
+            </span>
+          )}
           <ul>
             <li>
-              <a href="#bienvenida" className="bienvenida"> DevRosses </a>
+              <a href="#bienvenida" className="bienvenida">
+                {" "}
+                DevRosses{" "}
+              </a>
             </li>
             <li>
               <a href="#conoceme"> Conoceme </a>
