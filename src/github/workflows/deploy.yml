@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # O la rama que estés usando para tu desarrollo principal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16" # Asegúrate de usar la versión de Node.js compatible con tu proyecto
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build # Este comando debe generar la carpeta "dist" en Vite o ".next" en Next.js
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # Si usas Vite, la carpeta de build será "dist". Si es Next.js, usa ".next"
