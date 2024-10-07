@@ -3,8 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # O la rama que estés usando para tu desarrollo principal
-
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16" # Asegúrate de usar la versión de Node.js compatible con tu proyecto
+          node-version: "20.17.0" # Asegúrate de usar la versión de Node.js compatible con tu proyecto
 
       - name: Install dependencies
         run: npm install
