@@ -1,15 +1,12 @@
-import "../assets/estilos/Header.css"
-import User from "../assets/estaticos/User.jpg"
+import "../assets/estilos/Header.css";
+import User from "../assets/estaticos/User.jpg";
 import React, { useState } from "react";
 
 function Header() {
-
   const [menuAbierto, setMenuAbierto] = useState(false);
 
   const toggleMenu = () => {
     setMenuAbierto(!menuAbierto);
-    console.log('funciona el click')
-    console.log("el menu esta: ", setMenuAbierto );
   };
 
   return (
@@ -27,27 +24,37 @@ function Header() {
               X
             </span>
           )}
+
           <ul>
             <li>
-              <a href="#bienvenida" className="bienvenida">
-                {" "}
-                DevRosses{" "}
+              <a href="#bienvenida" className="bienvenida" onClick={toggleMenu}>
+                DevRosses
               </a>
             </li>
             <li>
-              <a href="#conoceme"> Conoceme </a>
+              <a href="#conoceme" onClick={toggleMenu}>
+                Conóceme
+              </a>
             </li>
             <li>
-              <a href="#experiencias"> Experiencia </a>
+              <a href="#experiencias" onClick={toggleMenu}>
+                Experiencia
+              </a>
             </li>
             <li>
-              <a href="#estudios"> Estudio </a>
+              <a href="#estudios" onClick={toggleMenu}>
+                Estudio
+              </a>
             </li>
             <li>
-              <a href="#proyectos"> Proyecto </a>
+              <a href="#proyectos" onClick={toggleMenu}>
+                Proyecto
+              </a>
             </li>
             <li>
-              <a href="#contacto"> Contacto </a>
+              <a href="#contacto" onClick={toggleMenu}>
+                Contacto
+              </a>
             </li>
           </ul>
         </nav>

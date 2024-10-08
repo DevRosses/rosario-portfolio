@@ -6,12 +6,13 @@
 
 :root {
   --color-primario: #222831;
-  --color-secundario: #393E46;
-  --color-fondo: #EEEEEE;
-  --color-acento: #00ADB5;
+  --color-secundario: #393e46;
+  --color-fondo: #eeeeee;
+  --color-acento: rgb(0, 173, 181);
+  --color-acento-20: #00acb53f;
+  --color-acento2: #e41655;
   --font-family: "Kay Pho Du", sans-serif;
   --font-size-base: 16px;
   --espacios-1: 2.5rem 4rem;
   --espacios-2: 1rem 2rem;
 }
-

@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 12%;
@@ -10,15 +10,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
-  height: 20%;
-     max-width: 95%; 
+  max-height: 20%;
+  max-width: 90%;
   background-color: var(--color-acento);
   border-radius: 0 25%;
   overflow: hidden;
   padding: 4px;
+  box-shadow: 2px 0 5px rgba(152, 240, 252, 0.2);
 }
 
 .logo img {
@@ -26,20 +28,19 @@
   width: 100%;
   object-fit: cover;
   border-radius: 0 25%;
-  
 }
 
 .nav {
-  height: 40%;
-  width: 70%;
+  max-height: 60%;
+  max-width: 90%;
   z-index: 1000;
-     max-width: 90%; 
-     
 }
 
 .nav ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav ul li {
@@ -49,101 +50,106 @@
 .nav ul li a {
   color: var(--color-fondo);
   text-decoration: none;
-  font-size: 1.3rem;
-     max-width: 90%;
+  font-size: 1.2rem;
 }
 
 .nav ul li a:hover {
   color: var(--color-acento);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .close-btn {
-display: none;
+  display: none;
 }
 
-@media (max-width: 1100px) {
-
-  .header {
-    padding: 50px 15px; 
-    
-  }
-
-  .nav{
-    padding: 15%;
-   max-width: 90%;  
-  }
-}
 
 @media (max-width: 768px) {
-   .header {
+  .header {
     background-color: transparent;
-    position: fixed;
-    margin: 10px 0;
-       max-width: 90%; 
-    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 40%; 
     z-index: 1000;
-    padding: 40px 10px; 
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0);
   }
 
   .logo {
-    height: 100px;
-    width: 100px;
-    background-color: transparent;
-    background-color: var(--color-acento);
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 100px; 
+    height: 120px;
+    z-index: 1500;
+    transition: opacity 0.5s ease-in-out;
+    animation: titilar-sombra 2s infinite;
   }
 
-  .logo img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .nav {
-    display: none;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 24%;
-    height: 46%;
-    background-color: var(--color-secundario);
-    padding: 32px 24px;
-    z-index: 1000;
-    border-radius: 25% 0 0 25%;
-  }
-
-  .nav.open {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .nav ul li a {
-    font-size: 1.1rem;
-  }
-
-
-.content-blurred {
-  filter: blur(5px);
-  transition: filter 0.3s ease-in-out;
-}
-
- .close-btn {
-  display: block;
-    position: fixed;
-    top: 10px; 
-    right: 10px;
-    font-size: 1.3rem;
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: bold;
-    color: var(--color-fondo);
-  }
-
-  .hide-logo {
+  .logo.hide-logo {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
 
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 33.33%; 
+    height: 50%;
+    background-color: var(--color-secundario);
+    z-index: 1000;
+    display: none; 
+    transition: transform 0.3s ease-in-out; 
+    transform: translateX(100%); 
+    overflow-y: auto;
+    border-radius: 0 40px 0 80px;
+    box-shadow: 0 0  5px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav.open {
+    display: block;
+    transform: translateX(0); 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 1.3rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    color: var(--color-fondo);
+    z-index: 2000; 
+    display: block;
+    padding: 8px;
+  }
+
+  .nav ul{
+    margin: 48px 24px;
+  }
+
+  .nav ul li {
+  margin: 16px 0;
+  text-align: center ;
 }
 
+.nav ul li a {
+  color: var(--color-fondo);
+  text-decoration: none;
+  font-size: 1.4rem;
+}
 
+}
+
+@keyframes titilar-sombra {
+  0%, 100% {
+    box-shadow: 0 4px 10px rgb(0, 173, 181, 0.3); 
+  }
+  50% {
+    box-shadow: 0 8px 20px rgb(0, 173, 181, 0.5); 
+  }
+}

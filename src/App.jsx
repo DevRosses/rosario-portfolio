@@ -9,11 +9,9 @@ import Contacto from "./componentes/Contacto";
 import "./assets/estilos/App.css";
 
 function App() {
-
-  
   return (
     <div className="app">
-      <Header  />
+      <Header />
       <main className="content">
         <Bienvenida />
         <Conoceme />
