@@ -1,5 +1,6 @@
 import "../assets/estilos/Header.css";
 import User from "../assets/estaticos/User.jpg";
+import Star from "../assets/estaticos/img3.png"
 import React, { useState } from "react";
 
 function Header() {
@@ -15,7 +16,8 @@ function Header() {
         <div
           className={`logo ${menuAbierto ? "hide-logo" : ""}`}
           onClick={toggleMenu}>
-          <img src={User} alt="User" />
+          <img src={User} alt="User" className="user"/>
+          <img src={Star} alt="start" className="start"/>
         </div>
 
         <nav className={`nav ${menuAbierto ? "open" : ""}`}>
