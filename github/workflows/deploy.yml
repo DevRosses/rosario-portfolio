@@ -10,21 +10,21 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "16" # Asegúrate de usar la versión de Node.js compatible con tu proyecto
+          node-version: "20.17.0"
 
       - name: Install dependencies
         run: npm install
 
       - name: Build project
-        run: npm run build # Este comando debe generar la carpeta "dist" en Vite o ".next" en Next.js
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Si usas Vite, la carpeta de build será "dist". Si es Next.js, usa ".next"
+          publish_dir: ./dist
